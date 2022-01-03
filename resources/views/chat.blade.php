@@ -24,6 +24,7 @@
 var user_name = '';
 
 var pusher = new Pusher('{{env("PUSHER_KEY")}}', {
+    cluster: '{{env("PUSHER_CLUSTER")}}',
     authEndpoint: '{{url("auth")}}',
     auth: {
         headers: {
